@@ -2,6 +2,8 @@
 
 By developing and training a Convolutional Neuron Network Model using [Tensorflow](https://www.tensorflow.org/), this application is for classifying cats and dogs' pictures.
 
+To play around with the app, here: [kitty-or-doggo](https://kitty-or-doggo.streamlit.app/)
+
 ## Data
 The dataset used in this project is called [**The CIFAR-10 dataset**](https://www.cs.toronto.edu/~kriz/cifar.html) 
 
@@ -9,9 +11,6 @@ The dataset used in this project is called [**The CIFAR-10 dataset**](https://ww
 ```
   from tensorflow.keras.datasets import cifar10
 ```
-
-
-To play around with the app, here: [kitty-or-doggo](https://kitty-or-doggo.streamlit.app/)
 
 ## Set up environment
 
