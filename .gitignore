@@ -2,4 +2,7 @@
 */.ipynb_checkpoints/*
 **/*.ipynb_checkpoints/
 
+.devcontainer/
+*/.devcontainer/*
+
 .DS_Store

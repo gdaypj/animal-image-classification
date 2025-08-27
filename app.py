@@ -22,7 +22,7 @@ if 'clicked' not in st.session_state:
 def clicked(button):
   st.session_state.clicked[button] = True
 
-st.button("Let's go classy(fy)!", on_click=clicked, args=[1])
+st.button("Let's go classy-fy!", on_click=clicked, args=[1])
 
 def pre_processing_img(img):
     img = np.asarray(img)
@@ -40,15 +40,15 @@ if st.session_state.clicked[1]:
   uploaded_img = st.file_uploader('Browse files', type=['jpg','jpeg' ,'png'])
   
   if uploaded_img:
-    st.subheader('Your Pic')
-    st.image(uploaded_img)
+    st.subheader('Your Pic:')
+    st.image(uploaded_img, use_container_width=True)
     
     model = tf.keras.models.load_model(os.path.join('./model','model.h5'))
     img = Image.open(uploaded_img)
     img = pre_processing_img(img)
     pred = model.predict(img)
 
-    st.subheader('My Guess:')
+    st.subheader('Be My Guess-t:')
     st.write(f"<p style='text-align:center; font-size:3rem; font-weight:bold; text-shawdow:2px 2px 3px blue;  color:{'#d6213b' if 'kitty' else '#9fdcf7'}'>{cat_or_dog(pred)}</p>", unsafe_allow_html=True)
     st.write(pred)
 
