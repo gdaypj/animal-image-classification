@@ -1,6 +1,5 @@
 import streamlit as st
-import tensorflow as tf
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import os
 import cv2
 import matplotlib.pyplot as plt
@@ -16,9 +15,6 @@ with st.sidebar:
     st.markdown('- JPG')
     st.markdown('- JPEG')
     st.markdown('- PNG')
-
-# if st.button("Let's go classy"):
-#   uploaded_img = st.file_uploader('Browse a file')
 
 if 'clicked' not in st.session_state:
   st.session_state.clicked = {1:False}
