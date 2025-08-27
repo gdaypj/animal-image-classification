@@ -1,5 +1,5 @@
 import streamlit as st
-from keras.models import load_model
+import tensorflow as tf
 import os
 import cv2
 import matplotlib.pyplot as plt
@@ -43,7 +43,7 @@ if st.session_state.clicked[1]:
     st.subheader('Your Pic')
     st.image(uploaded_img)
     
-    model = load_model(os.path.join('./model','model.h5'))
+    model = tf.keras.models.load_model(os.path.join('./model','model.h5'))
     img = Image.open(uploaded_img)
     img = pre_processing_img(img)
     pred = model.predict(img)
