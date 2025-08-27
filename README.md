@@ -1,1 +1,1 @@
-# animal-image-classification
+# image-classification
