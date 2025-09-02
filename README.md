@@ -1,4 +1,4 @@
-# Image-classification
+# Image Classification
 
 By developing and training a Convolutional Neuron Network Model using [Tensorflow](https://www.tensorflow.org/), this application is for classifying cats and dogs' pictures.
 
