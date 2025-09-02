@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 
-st.title("Image Classification Model: Cats and Dogs")
+st.title("Image Classification Model: Cats or Dogs?")
 
 with st.sidebar:
-  st.header('Data Format Requirement:')
-  st.caption('upload an image file to run the app')
+  st.header('Data Format Requirements:')
+  st.caption('Upload an image file to start')
   with st.expander('Image format'):
     st.markdown('- JPG')
     st.markdown('- JPEG')
@@ -48,8 +48,8 @@ if st.session_state.clicked[1]:
     img = pre_processing_img(img)
     pred = model.predict(img)
 
-    st.subheader('Be My Guess-t:')
-    st.write(f"<p style='text-align:center; font-size:3rem; font-weight:bold; text-shawdow:2px 2px 3px blue;  color:{'#d6213b' if 'kitty' else '#9fdcf7'}'>{cat_or_dog(pred)}</p>", unsafe_allow_html=True)
+    st.subheader('What is it?')
+    st.write(f"<p style='text-align:center; font-size:3rem; font-weight:bold; text-shawdow:2px 2px 3px blue; color:'#d6213b'>{cat_or_dog(pred)}</p>", unsafe_allow_html=True)
     st.write(pred)
 
 
